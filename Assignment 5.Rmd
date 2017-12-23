@@ -8,15 +8,15 @@ For this assignment we will be using data from the Assistments Intelligent Tutor
 
 #Install & call libraries
 ```{r}
-install.packages("party", "rpart")
-
+install.packages("rpart")
+install.packages("party")
 library(rpart)
 library(party)
 ```
 
 ## Part I
 ```{r}
-D1 <- 
+D1 <- as.data.frame(intelligent_tutor) 
 ```
 
 ##Classification Tree
@@ -55,7 +55,7 @@ score_ctree <- ctree(factor(advice) ~ prior_prob_count + prior_percent_correct +
 
 #Plot tree
 ```{r}
-plot(score_ctree)
+plot(score_ctree) 
 ```
 
 Please interpret the tree, which two behaviors do you think the teacher should most closely pay attemtion to?
